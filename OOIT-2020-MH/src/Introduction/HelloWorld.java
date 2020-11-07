@@ -57,6 +57,57 @@ public class HelloWorld {
 			f--;
 		}
 		System.out.println("Faktorijel broja 5 je: " + sumF);
+		
+		// VEZBE 2
+		// Zadatak 1
+		f = 5;
+		sumF = 1;
+		int i = 1;
+		do {
+			sumF = sumF * i;
+			i++;
+		} 
+		while(i <= f);
+		System.out.println("Faktorijel broja 5 je: " + sumF);
+		
+		sumF = 1;
+		for(int j = 1; j <= f; j++) {
+			sumF = sumF * j;
+		}
+		System.out.println("Faktorijel broja 5 je: " + sumF);
+		
+		
+		// Zadatak 2
+		int brojKupaca = 5;
+		int brojRadnika = 5;
+		int brojRaspolozivihKasa = 3;
+		
+		int brojOtvorenihKasa = 0;
+		if (brojKupaca < 10 && brojRadnika < 5) {
+			brojOtvorenihKasa = 1;
+		}
+		// 10 <= brojkupaca < 25
+		else if (brojKupaca >= 10 && brojKupaca < 25 && brojRaspolozivihKasa >= 2) {
+			brojOtvorenihKasa = 2;
+		}
+		else if (brojKupaca > 25 && brojRadnika > 5 && brojRaspolozivihKasa >= 3) {
+			brojOtvorenihKasa = 3;
+		}
+		else {
+			brojOtvorenihKasa = brojRaspolozivihKasa;
+		}
+		System.out.println("Broj otvorenih kasa u supermarketu je: " + brojOtvorenihKasa);
+	
+		// Zadatak 3
+		for (i = 99; i >= 10; i--) {
+			if (i % 2 == 1) {
+				System.out.println(i);
+			}
+		}
+		
+		for (i = 99; i >= 10; i = i - 2) {
+			System.out.println(i);
+		}
 	}
 
 }
