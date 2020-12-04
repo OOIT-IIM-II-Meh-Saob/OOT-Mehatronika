@@ -1,9 +1,10 @@
 package geometry;
 
-public class Circle {
+import java.awt.Graphics;
+
+public class Circle extends Shape {
 	protected Point center;
 	protected int r;
-	protected boolean selected;
 	
 	public Circle() {
 		
@@ -20,7 +21,7 @@ public class Circle {
 	}
 	
 	public double area() {
-		return r * r * Math.PI; 
+		return r * r * Math.PI;
 	}
 	
 	public double circumference() {
@@ -33,6 +34,11 @@ public class Circle {
 	
 	public boolean contains(Point p) {
 		return this.contains(p.getX(), p.getY());
+	}
+	
+	@Override
+	public void draw(Graphics g) {
+		g.drawOval(center.getX() - r, center.getY() - r, r + r, r + r);
 	}
 	
 	@Override
@@ -65,13 +71,5 @@ public class Circle {
 	
 	public void setR(int r) {
 		this.r = r;
-	}
-	
-	public boolean isSelected() {
-		return selected;
-	}
-	
-	public void setSelected(boolean selected) {
-		this.selected = selected;
 	}
 }
